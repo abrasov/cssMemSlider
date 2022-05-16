@@ -37,7 +37,19 @@ img {
   object-fit: contain;
 }
 .post-slider {
+  display: flex;
+  align-items: center;
 
+}
+.text-content {
+  overflow: hidden;
+}
+.text-block{
+  display: flex;
+  width: 400%;
+}
+.text {
+  width: 100%;
 }
 .navigation {
   display: flex;
@@ -56,6 +68,18 @@ label div{
 label:hover div{
   background-color: #5555ff;
 }
+.slide1:checked ~ .post-slider .text1 {
+  margin-left: 0%;
+}
+.slide2:checked ~ .post-slider .text1 {
+  margin-left: -33%;
+}
+.slide3:checked ~ .post-slider .text1 {
+  margin-left: -100%;
+}
+.slide4:checked ~ .post-slider .text1 {
+  margin-left: -300%;
+}
 .slide1:checked ~ .slider .first-item {
   margin-left: 0%;
 }
@@ -68,6 +92,7 @@ label:hover div{
 .slide4:checked ~ .slider .first-item {
   margin-left: -300%;
 }
+
 .slide1:checked ~ .post-slider label:nth-child(1) div {
   background-color: #0000fd;
   transform: scale(0.85);
