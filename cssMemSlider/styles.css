@@ -18,7 +18,7 @@ body {
 }
 
 .title {
-  margin: 1em 0;
+  margin-top: 1em;
 }
 input {
   visibility: hidden;
@@ -28,7 +28,6 @@ ul {
 }
 .slider {
   display: flex;
-  margin: 1em 0;
   overflow: hidden;
 }
 img {
@@ -43,16 +42,18 @@ img {
 .navigation {
   display: flex;
   justify-content: flex-end;
-  gap: 1em;
 }
 label {
-  width: 2em;
-  height: 2em;
-  border-radius: 50%;
-  background-color: #aaaafd;
   cursor: pointer;
 }
-label:hover {
+label div{
+  width: 2em;
+  height: 2em;
+  margin: 1em;
+  border-radius: 50%;
+  background-color: #aaaafd;
+}
+label:hover div{
   background-color: #5555ff;
 }
 .slide1:checked ~ .slider .first-item {
@@ -66,4 +67,20 @@ label:hover {
 }
 .slide4:checked ~ .slider .first-item {
   margin-left: -300%;
+}
+.slide1:checked ~ .post-slider label:nth-child(1) div {
+  background-color: #0000fd;
+  transform: scale(0.85);
+}
+.slide2:checked ~ .post-slider label:nth-child(2) div {
+  background-color: #0000fd;
+  transform: scale(0.85);
+}
+.slide3:checked ~ .post-slider label:nth-child(3) div {
+  background-color: #0000fd;
+  transform: scale(0.85);
+}
+.slide4:checked ~ .post-slider label:nth-child(4) div {
+  background-color: #0000fd;
+  transform: scale(0.8);
 }
