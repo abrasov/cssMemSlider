@@ -38,6 +38,7 @@ img {
 }
 .post-slider {
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
 
 }
@@ -53,7 +54,7 @@ img {
 }
 .navigation {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 label {
   cursor: pointer;
@@ -108,4 +109,10 @@ label:hover div{
 .slide4:checked ~ .post-slider label:nth-child(4) div {
   background-color: #0000fd;
   transform: scale(0.8);
+}
+
+@media(max-width: 629px){
+  .post-slider {
+    display: block;
+  }
 }
